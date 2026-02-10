@@ -1,0 +1,18 @@
+[package]
+name = "sync-utils"
+version = "0.1.0"
+authors = ["Fernando Lopes <fernando.lopes@freenet.de>"]
+license = "MIT"
+description = "A few rust sync utils."
+repository = "https://github.com/da-ferdl/sync-utils"
+readme = "README.md"
+edition = "2024"
+
+[dependencies]
+crossbeam-queue = "0.3.12"
+
+[target.'cfg(not(any(target_os = "macos", target_os = "ios")))'.dependencies]
+atomic-wait = "1.1.0"
+
+[dev-dependencies]
+atomic-wait = "1.1.0"
